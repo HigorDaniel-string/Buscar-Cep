@@ -1,0 +1,182 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 130deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: 400px; /*43,34*/
+}
+
+
+body {
+  background: #212534;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+
+
+#card {
+  background: #191c29;
+  width: 700px;
+  height: 800px;
+  margin-top: -20px;
+  position: relative;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6); /*10,84*/
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+h1{
+  display: flex;
+  font-size: 23px;
+  margin-left: 50px;
+}
+.form-label {
+  display: flex;
+
+  font-size: 25px;
+  
+  margin-top: 50px;
+  margin-left: 48px;
+  margin-bottom: 4.5rem;
+}
+
+#container strong {
+  display: inline-block;
+  justify-content:center;
+  align-items: center;
+  width: 10px;
+  margin-left: -65%;
+  margin-top: -10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* #container strong {
+  display: inline-block;
+  margin-left: -85%;
+  justify-content: center;
+  align-items: center;
+} */
+
+#buscarcep{
+  display: flex;
+  padding: 10px;
+  background: #27262671;
+  color: #fff;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  width: 500px;
+  margin-top: 70px;
+  line-height: 0.5;
+  margin-top: -38px;
+  margin-left: 100px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+span{
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.mt-2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 10px;
+  padding-top: 20px;
+}
+
+.mt-2 p {
+  border: 1px solid #272b3f;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  width: 500px;
+  height: 40px;
+  font-size: 18px;
+  display: inline-block;
+  align-items: end;
+}
+.mt-2 strong{
+  margin-left: 5px;
+  font-size: 45px;
+}
+
+@media screen and (max-width: 459px){
+  #card {
+    max-width: 400px;
+    max-height: 90%;
+    padding-top: 10px;
+  }
+  
+  #buscarcep{
+    display: block;
+    padding: 10px 2%;
+    width: 90%;
+    margin-top: -100px;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .mt-2 p {
+    width: 90%;
+    height: 30px;
+    font-size: 15px;
+
+  }
+  .mt-2 strong{
+    display: inline-block;
+    width: 10px;
+    margin-left: -65%;
+    margin-top: -10px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
