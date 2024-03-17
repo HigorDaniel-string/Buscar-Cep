@@ -78,8 +78,9 @@ h1{
 
 .text-input {
   display: flex;
-  width: 35px;
-  margin-top: -30px;
+  height: 1px;
+  width: 20px;
+  margin-top: 55px;
   margin-left: 110px;
   color: #ffffffa1;
   font-weight: 600;
@@ -114,7 +115,7 @@ h1{
   width: 400px;
   margin-top: 70px;
   line-height: 0.5;
-  margin-top: 40px;
+  margin-top: -20px;
   margin-left: 150px;
   font-size: 1rem;
   font-weight: 400;
@@ -159,13 +160,14 @@ span{
   
   .text-input {
     margin-left: 10%;
+    margin-top: -20px;
   }
 
   #buscarcep{
     display: block;
     padding: 10px 2%;
     width: 72%;
-    margin-top: -50px;
+    margin-top: -25px;
     margin-left: 20%;
   }
   .mt-2 p {
